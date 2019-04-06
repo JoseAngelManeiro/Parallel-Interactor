@@ -6,7 +6,7 @@
   android:layout_height="match_parent"
   android:orientation="vertical"
   android:gravity="center"
-  tools:context=".main.MainActivity">
+  tools:context=".main.view.MainActivity">
 
   <TextView
     android:id="@+id/startLabelTextView"
