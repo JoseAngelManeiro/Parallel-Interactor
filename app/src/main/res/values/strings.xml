@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Parallel Interactor</string>
+  <string name="app_name">Parallel Interactor</string>
+  <string name="start_label">Start</string>
+  <string name="finish_label">Finish</string>
+  <string name="sequential_label">Sequential</string>
+  <string name="parallel_label">Parallel</string>
 </resources>
