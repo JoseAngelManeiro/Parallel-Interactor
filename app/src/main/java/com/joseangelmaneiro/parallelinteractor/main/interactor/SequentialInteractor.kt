@@ -7,8 +7,9 @@ import com.joseangelmaneiro.parallelinteractor.domain.Hotel
 import com.joseangelmaneiro.parallelinteractor.domain.Review
 import com.joseangelmaneiro.parallelinteractor.domain.repository.HotelRepository
 import com.joseangelmaneiro.parallelinteractor.domain.repository.ReviewRepository
+import javax.inject.Inject
 
-class SequentialInteractor constructor(
+class SequentialInteractor @Inject constructor(
   private val hotelRepository: HotelRepository,
   private val reviewRepository: ReviewRepository
 ): Interactor<SequentialInteractor.Request, SequentialInteractor.Response>() {

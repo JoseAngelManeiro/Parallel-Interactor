@@ -1,32 +1,24 @@
 package com.joseangelmaneiro.parallelinteractor.main.view
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.joseangelmaneiro.parallelinteractor.R
-import com.joseangelmaneiro.parallelinteractor.data.HotelRepositoryImpl
-import com.joseangelmaneiro.parallelinteractor.data.ReviewRepositoryImpl
-import com.joseangelmaneiro.parallelinteractor.main.interactor.ParallelInteractor
-import com.joseangelmaneiro.parallelinteractor.main.interactor.SequentialInteractor
 import com.joseangelmaneiro.parallelinteractor.main.presenter.MainPresenter
 import com.joseangelmaneiro.parallelinteractor.main.presenter.MainView
+import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), MainView {
+class MainActivity : DaggerAppCompatActivity(), MainView {
 
+  @Inject
   lateinit var presenter: MainPresenter
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
-
-    presenter = MainPresenter(
-      mainView = this,
-      sequentialInteractor = SequentialInteractor(HotelRepositoryImpl(), ReviewRepositoryImpl()),
-      parallelInteractor = ParallelInteractor(HotelRepositoryImpl(), ReviewRepositoryImpl())
-    )
 
     initViews()
   }
