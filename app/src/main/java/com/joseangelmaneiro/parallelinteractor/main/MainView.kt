@@ -1,4 +1,4 @@
-package com.joseangelmaneiro.parallelinteractor
+package com.joseangelmaneiro.parallelinteractor.main
 
 interface MainView {
   fun startLoading()

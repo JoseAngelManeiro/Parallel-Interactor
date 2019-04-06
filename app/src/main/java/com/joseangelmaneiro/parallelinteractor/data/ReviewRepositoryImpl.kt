@@ -6,7 +6,7 @@ import com.joseangelmaneiro.parallelinteractor.domain.repository.ReviewRepositor
 
 class ReviewRepositoryImpl: ReviewRepository {
 
-  override fun getReview(): Either<Exception, Review> {
+  override fun getReview(id: Int): Either<Exception, Review> {
     // Send Review after 2 seconds
     Thread.sleep(2000)
     return Either.Right(Review(count = 123, rating = 4.5))

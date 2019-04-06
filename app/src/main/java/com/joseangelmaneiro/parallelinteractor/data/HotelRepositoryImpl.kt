@@ -6,7 +6,7 @@ import com.joseangelmaneiro.parallelinteractor.domain.repository.HotelRepository
 
 class HotelRepositoryImpl: HotelRepository {
 
-  override fun getHotel(): Either<Exception, Hotel> {
+  override fun getHotel(id: Int): Either<Exception, Hotel> {
     // Send Hotel after 3 seconds
     Thread.sleep(3000)
     return Either.Right(

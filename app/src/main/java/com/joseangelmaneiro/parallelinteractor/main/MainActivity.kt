@@ -1,8 +1,9 @@
-package com.joseangelmaneiro.parallelinteractor
+package com.joseangelmaneiro.parallelinteractor.main
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.joseangelmaneiro.parallelinteractor.R
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
